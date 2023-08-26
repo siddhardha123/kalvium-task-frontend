@@ -22,20 +22,24 @@ const UpcomingClassCard = ({ className, time, venue, links }) => {
   );
 
   return (
-    <div className="bg-white rounded-xl shadow-xl p-4">
+    <div className="bg-white rounded-xl shadow-xl p-4 flex justify-between">
+      <div>
       <h3 className="text-xl font-semibold mb-2">{className}</h3>
       <div className="flex items-center mb-2">
         {clockIcon}
-        <span className="text-gray-600">{time}</span>
+        <span className="text-red-600">{time}</span>
       </div>
       <div className="flex items-center mb-2">
         {locationIcon}
-        <span className="text-gray-600">{venue}</span>
+        <span className="text-red-600">{venue}</span>
       </div>
+
+      </div>
+      
       <div className="flex items-center space-x-2">
         {linkIcon}
         {links.map((link, index) => (
-          <a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="text-blue-500">
+          <a key={index} href={link.url} className="text-red-600">
             {link.label}
           </a>
         ))}

@@ -47,23 +47,23 @@ const AttendanceCard = ({ className, time, venue, links }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-xl p-4 flex justify-between">
+    <div className="bg-white  rounded-xl shadow-xl p-4 flex justify-between">
       <div>
       <h3 className="text-xl font-semibold mb-2">{className}</h3>
       <div className="flex items-center mb-2">
         {clockIcon}
-        <span className="text-gray-600">{time}</span>
+        <span className="text-red-600">{time}</span>
       </div>
       <div className="flex items-center mb-2">
         {locationIcon}
-        <span className="text-gray-600">{venue}</span>
+        <span className="text-red-600">{venue}</span>
       </div>
 
       </div>
       <div>
       <button
         onClick={handleAttendanceClick}
-        className="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-600"
+        className="bg-red-600 text-white px-4 py-2 rounded-md shadow-md hover:bg-green-600"
       >
         Mark Attendance
       </button>

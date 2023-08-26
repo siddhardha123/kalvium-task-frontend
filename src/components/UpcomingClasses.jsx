@@ -5,7 +5,7 @@ const UpcomingClasses = ({ classes }) => {
     <div className="mt-4">
         
 
-        <h2 className="text-3xl font-semibold text-white">Upcoming Classes</h2>
+        <h2 className="text-3xl font-semibold text-red-600">Upcoming Classes</h2>
         
         <div className='space-y-5 mt-2'>
         {

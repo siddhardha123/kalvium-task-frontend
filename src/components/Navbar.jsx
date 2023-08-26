@@ -19,11 +19,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-blue-500 p-4">
+    <nav className="bg-white p-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <a href="/" className="text-white text-xl font-semibold">
-            YourLogo
+          <a href="/" className="text-red-600 text-3xl font-semibold">
+            Kalvium
           </a>
         </div>
         <div className="hidden md:flex space-x-6">
@@ -31,7 +31,7 @@ const Navbar = () => {
             <a
               key={index}
               href={link.link}
-              className="text-white hover:text-gray-300 transition duration-300"
+              className="text-red-600 hover:text-gray-300 transition duration-300"
             >
               {link.label}
             </a>
@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={toggleMobileMenu}
-            className="text-white focus:outline-none"
+            className="text-red-600 focus:outline-none"
           >
             <svg
               className="h-6 w-6"
@@ -59,13 +59,13 @@ const Navbar = () => {
         </div>
       </div>
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-blue-500">
-          <div className="flex flex-col space-y-2 p-4">
+        <div className="md:hidden text-red-600">
+          <div className="flex flex-col justify-center space-y-2 p-4">
             {navLinks.map((link, index) => (
               <a
                 key={index}
                 href={link.link}
-                className="text-white hover:text-gray-300 transition duration-300"
+                className="hover:text-gray-300 transition duration-300"
                 onClick={closeMobileMenu}
               >
                 {link.label}
