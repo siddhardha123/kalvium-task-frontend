@@ -1,0 +1,59 @@
+{
+    "totalHours" : 10,
+    "presentHours" : 5,
+    "activeClasses": [
+      {
+        "id": 1,
+        "className": "Mathematics",
+        "time": "10:00 AM - 11:30 AM",
+        "venue": "Room 203",
+        "links": [
+          { "label": "Zoom Meeting", "url": "https://example.com/zoom" },
+          { "label": "Class Materials", "url": "https://example.com/materials" }
+        ]
+      },
+      {
+        "id": 2,
+        "className": "Physics",
+        "time": "12:00 PM - 1:30 PM",
+        "venue": "Room 301",
+        "links": [
+          { "label": "Zoom Meeting", "url": "https://example.com/zoom" },
+          { "label": "Class Materials", "url": "https://example.com/materials" }
+        ]
+      }
+    ],
+    "classes": [
+      {
+        "id": 1,
+        "className": "Chemistry",
+        "time": "2:00 PM - 3:30 PM",
+        "venue": "Room 102",
+        "links": [
+          { "label": "Zoom Meeting", "url": "https://example.com/zoom" },
+          { "label": "Class Materials", "url": "https://example.com/materials" }
+        ]
+      },
+      {
+        "id": 2,
+        "className": "Biology",
+        "time": "4:00 PM - 5:30 PM",
+        "venue": "Room 404",
+        "links": [
+          { "label": "Zoom Meeting", "url": "https://example.com/zoom" },
+          { "label": "Class Materials", "url": "https://example.com/materials" }
+        ]
+      },
+      {
+        "id": 3,
+        "className": "History",
+        "time": "6:00 PM - 7:30 PM",
+        "venue": "Room 201",
+        "links": [
+          { "label": "Zoom Meeting", "url": "https://example.com/zoom" },
+          { "label": "Class Materials", "url": "https://example.com/materials" }
+        ]
+      }
+    ]
+  }
+  

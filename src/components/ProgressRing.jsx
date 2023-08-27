@@ -4,25 +4,24 @@ import {
   buildStyles
 } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-const ProgressRing = ({presentHours ,totalHours }) => {
-  const percentage = (presentHours/totalHours)*100
+const ProgressRing = ({ presentHours, totalHours }) => {
+  const percentage = (presentHours / totalHours) * 100
   return (
-     <div className='flex justify-center align-center'>
-        
-        <div className='w-[15rem]' >
-          <p className='text-2xl text-center text-red-600'></p>
-        <CircularProgressbar         
-            value={percentage}
-            text={`${percentage}%`}
-            styles={buildStyles({
-              pathColor: percentage >= 75 ? "green" : "red",
-              textColor : "white",
-              // rotation: 0.5 + (1 - percentage / 100) / 2
-            })}
-          />
-        </div>
-          
-     </div>
+    <div className='flex justify-center align-center'>
+
+      <div className='w-[15rem]' >
+        <p className='text-2xl text-center text-red-600'></p>
+        <CircularProgressbar
+          value={percentage}
+          text={`${percentage}%`}
+          styles={buildStyles({
+            pathColor: percentage >= 75 ? "green" : "red",
+            textColor: "white",
+          })}
+        />
+      </div>
+
+    </div>
   );
 };
 

@@ -1,23 +1,18 @@
 import React, { useState } from 'react';
-
+import { useAuth } from '../context/AuthContext';
+import {  useNavigate } from 'react-router-dom';
+import { BreadCrump } from '../icons';
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const {logout} = useAuth();
+  const  navigate = useNavigate();
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
-
-  const closeMobileMenu = () => {
-    setMobileMenuOpen(false);
-  };
-
-  const navLinks = [
-    { label: 'Home', link: '/' },
-    { label: 'About', link: '/about' },
-    { label: 'Services', link: '/services' },
-    { label: 'Contact', link: '/contact' },
-  ];
-
+  const handleLogout = () =>{
+     navigate('/')
+     logout()
+  }
   return (
     <nav className="bg-white p-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -27,50 +22,21 @@ const Navbar = () => {
           </a>
         </div>
         <div className="hidden md:flex space-x-6">
-          {navLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link.link}
-              className="text-red-600 hover:text-gray-300 transition duration-300"
-            >
-              {link.label}
-            </a>
-          ))}
+            <button onClick={handleLogout}>logout</button>
         </div>
         <div className="md:hidden">
           <button
             onClick={toggleMobileMenu}
             className="text-red-600 focus:outline-none"
           >
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
+            <BreadCrump/>
           </button>
         </div>
       </div>
       {isMobileMenuOpen && (
         <div className="md:hidden text-red-600">
           <div className="flex flex-col justify-center space-y-2 p-4">
-            {navLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.link}
-                className="hover:text-gray-300 transition duration-300"
-                onClick={closeMobileMenu}
-              >
-                {link.label}
-              </a>
-            ))}
+          <button onClick={handleLogout}>logout</button>
           </div>
         </div>
       )}
